@@ -24,7 +24,7 @@ usicgspelae10reducidotabla <- subset(peleae10, rownames(peleae10) %in% singleCop
 medianasusicgs <- colMeans(usicgspelae10reducidotabla) # Median of TPM USiCGs in each sample.  
 copynumber <- t(t(peleae10) / medianasusicgs) # Calculation of Copy Number. 
 
-write.table(copynumber, file="CopyNumber_wideformat.txt", sep="\t", quote=F) # Tabla in wide format with the copy number. 
+write.table(copynumber, file="CopyNumber_wideformat.txt", sep="\t", quote=F) # Table in wide format with the copy number. 
 
 
 # Calculation of MADs and selection of highly-variable genes. 
