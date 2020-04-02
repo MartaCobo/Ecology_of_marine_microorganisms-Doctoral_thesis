@@ -11,7 +11,9 @@
 # The variable foldchangeusicgsintersample contains the log2(foldchange) of USiCGs among different samples.
 # The variable foldchangeusicgsintrasample contains the log2(foldchange) of USiCGs in each sample. 
 
-# Author: Marta Cobo Simón
+# Author: Marta Cobo Simón, 2020
+
+# Doctoral thesis "Ecology of marine microorganisms: biodiversity, genomics and metagenomics".
 
 peleae10 = read.table("tablasjuntasordenado.txt",header=T,sep="\t",row.names=1)
 
@@ -48,13 +50,13 @@ kruskalwalliscopynumbertodos <- oneway.test(rpkm ~ muestra, data = listacopynumb
 
 write.table(listacopynumber, file="listacopynumber.txt", sep="\t", quote=F)
 
-# Genes hipervariables.
+# Highly-variable genes.
 
 hipervariables <- subset(listacopynumber, subset=listacopynumber$cog%in%rownames(hipervariablesMADs)) # Highly-variable genes and their TPMs in long format.
 hipervariablesimprimir <- subset(copynumber, subset=rownames(copynumber)%in%rownames(hipervariablesMADs)) # Highly-variable genes and their TPMs in wide format.
 write.table(hipervariablesimprimir, file="tablahipervariablesMADstpmcopynumber.txt", sep="\t", quote=F)
 
-# Cálculo del log(foldchange) de los USiCGs.
+# Calculation of log(foldchange) of USiCGs.
 usicgspeleae10 <- subset(copynumber, subset=rownames(copynumber) %in% singleCopy) # Extract USiCGs in wide format table. 
 foldchangeusicgsintersample <- apply(usicgspeleae10, 1, function(x) log2(max(x+0.00001)/min(x+0.00001))) # Calculation of log2(foldchange) of USiCGs among samples. 
 foldchangeusicgsintrasample <- apply(usicgspeleae10, 2, function(x) log2(max(x+0.00001)/min(x+0.00001))) # Calculation of log2(foldchange) of USiCGs in each sample. 
