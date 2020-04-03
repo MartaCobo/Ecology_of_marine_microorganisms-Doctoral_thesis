@@ -60,7 +60,7 @@ my $USAGE=<<"USAGE" ;
  
  Example:
  
-	perl $PROGNAME Pelagibacterales SamplesPelagibacterales.txt 12.coassembly.orftable 08.coassembly.contiglog /home/mcobo 
+	perl $PROGNAME Pelagibacterales SamplesPelagibacterales.txt 12.coassemblyresults.orftable 08.coassemblyresults.contiglog /home 
 	province10.samples kegg
 
 
