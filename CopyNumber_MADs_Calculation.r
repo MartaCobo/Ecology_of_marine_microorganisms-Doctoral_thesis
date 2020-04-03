@@ -116,3 +116,5 @@ for (i in 1:length(unique(cogshipervariables))) {
     
 }
 legend("topright", legend=cogshipervariablesordenadosinduplicados, col=colores, lwd=2.5, ncol=1, cex=2)
+
+dev.off()
