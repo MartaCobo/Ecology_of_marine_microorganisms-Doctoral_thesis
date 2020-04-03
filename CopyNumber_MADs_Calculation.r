@@ -30,7 +30,7 @@
 
 
 
-peleae10 = read.table("test_CopyNumber_MADs_Calculation3.txt",header=T,sep="\t",row.names=1)
+peleae10 = read.table("test_CopyNumber_MADs_Calculation.txt",header=T,sep="\t",row.names=1)
 
 
 # Select which group of USiCGs must be used.
