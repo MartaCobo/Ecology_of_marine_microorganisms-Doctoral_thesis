@@ -28,8 +28,10 @@
 
 # The variable foldchangeusicgsintrasample contains the log2(foldchange) of USiCGs in each sample. 
 
+# Test: test_CopyNumber_MADs_Calculation.txt as table of TPMs.
 
 
+# Read the table of TPMs.
 peleae10 = read.table("test_CopyNumber_MADs_Calculation.txt",header=T,sep="\t",row.names=1)
 
 
